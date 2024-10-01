@@ -1,0 +1,57 @@
+﻿@model estacionamento_dapper.Models.Vaga
+@{
+    ViewData["Title"] = "Incluir Vaga";
+}
+
+<div class="text-center">
+    
+</div>
+
+<div class="text-center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Vaga</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Nova Vaga</h3>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Criar" asp-asp-controller="Vaga" method="post">                            
+                            <div class="mb-3">
+                                <label for="CodigoLocalizacao" class="form-label">Codigo Localizacao</label>
+                                <input type="text" class="form-control" id="CodigoLocalizacao" asp-for="CodigoLocalizacao" required>
+                                <span asp-validation-for="CodigoLocalizacao" class="text-danger"></span>
+                            </div>
+                           <div class="mb-3 d-flex align-items-center">
+                                <div class="form-check">                                    
+                                    <label for="Ocupado" class="form-check-label">Ocupado</label>
+                                    <input type="checkbox" class="form-check-input" id="Ocupado" asp-for="Ocupado">
+                                </div>
+                                <span asp-validation-for="Ocupado" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+</html>
+
+</html>
+</div>

@@ -1,0 +1,65 @@
+﻿@model estacionamento_dapper.Models.Veiculo
+@{
+    ViewData["Title"] = "Incluir Veiculo";
+}
+
+<div class="text-center">
+    
+</div>
+
+<div class="text-center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Veiculo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Novo Veiculo</h3>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Criar" asp-asp-controller="Veiculo" method="post">                            
+                            <div class="mb-3">
+                                <label for="ClienteId" class="form-label">ClienteId</label>
+                                <input type="text" class="form-control" id="ClienteId" asp-for="ClienteId" required>
+                                <span asp-validation-for="ClienteId" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Placa" class="form-label">Placa</label>
+                                <input type="text" class="form-control" id="Placa" asp-for="Placa" required>
+                                <span asp-validation-for="Placa" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Marca" class="form-label">Marca</label>
+                                <input type="text" class="form-control" id="Marca" asp-for="Marca" required>
+                                <span asp-validation-for="Marca" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Modelo" class="form-label">Modelo</label>
+                                <input type="text" class="form-control" id="Modelo" asp-for="Modelo" required>
+                                <span asp-validation-for="Modelo" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+</html>
+
+</html>
+</div>

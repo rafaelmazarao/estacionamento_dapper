@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Ticket>
+
+@{
+    ViewData["Title"] = "Tickets";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Tickets</h1>
+    <a class="btn btn-primary" asp-controller="Tickets" asp-action="Novo">Novo</a>       
+</div>
+
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Placa</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Horario Entrada</th>
+                <th>Local</th> 
+                <th>Data Saida</th>  
+                <th>Valor Total</th>                              
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model){
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.veiculo.cliente.Nome</td>
+                    <td>@item.veiculo.Placa</td>
+                    <td>@item.veiculo.Marca</td>
+                    <td>@item.veiculo.Modelo</td>
+                    <td>@item.DataEntrada</td>
+                    <td>@item.vaga.CodigoLocalizacao</td>
+                    <td>@item.DataSaida</td>
+                    <td>
+                        R$ @item.ValorTotal(ViewBag.ValorDoMinuto)
+                        <hr>
+                         <form onsubmit="return confirm('Confirma pagamento?')" asp-route-id="@item.Id" asp-action="Pago" asp-asp-controller="Ticket" method="post">                            
+                            <button type="submit" class="btn btn-success" style="font-size: 20px;">Pago</button>
+                        </form> 
+                        <br>
+                         <form onsubmit="return confirm('Confirma Exclusao?')" asp-route-id="@item.Id" asp-action="Apagar" asp-asp-controller="Ticket" method="post">
+                            <button type="submit" class="btn btn-danger">Excluir</button>
+                        </form>
+                    </td>                    
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

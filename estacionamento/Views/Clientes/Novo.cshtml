@@ -1,0 +1,55 @@
+﻿@model estacionamento_dapper.Models.Cliente
+@{
+    ViewData["Title"] = "Incluir Cliente";
+}
+
+<div class="text-center">
+    
+</div>
+
+<div class="text-center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Cliente</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Novo Cliente</h3>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Criar" asp-asp-controller="Cliente" method="post">                            
+                            <div class="mb-3">
+                                <label for="Nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="Nome" asp-for="Nome" required>
+                                <span asp-validation-for="Nome" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Cpf" class="form-label">Cpf</label>
+                                <input type="text" class="form-control" id="Cpf" asp-for="Cpf" required>
+                                <span asp-validation-for="Cpf" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+</html>
+
+</html>
+</div>

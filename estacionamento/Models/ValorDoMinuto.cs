@@ -1,10 +1,14 @@
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using estacionamento_dapper.Repositorios;
 
 namespace estacionamento_dapper.Models;
 
+[Table("valores")]
 public class ValorDoMinuto
 {
-    public int Id { get; set;}
-    public int Minutos { get; set;}
-    public float ValorUnitario {get; set;}
+    [IgnoreInDapper]
+    public int Id { get; set;} = default!;
+    public int Minutos { get; set;} = default!;
+    public float Valor{get; set;} = default!;
 }

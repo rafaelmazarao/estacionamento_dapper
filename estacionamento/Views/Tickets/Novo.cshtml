@@ -1,0 +1,72 @@
+﻿@model estacionamento_dapper.Models.Ticket
+@{
+    ViewData["Title"] = "Incluir Ticket";
+}
+
+<div class="text-center">
+    
+</div>
+
+<div class="text-center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Ticket</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Novo Ticket</h3>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Criar" asp-asp-controller="Tickets" method="post">                            
+                            <div class="mb-3">
+                                <label for="Nome" class="form-label">Nome do cliente</label>
+                                <input type="text" class="form-control" id="Nome" name="Nome" required>                                
+                            </div>
+                            <div class="mb-3">
+                                <label for="Cpf" class="form-label">Cpf do cliente</label>
+                                <input type="text" class="form-control" id="Cpf" name="Cpf">                                
+                            </div>
+                            <div class="mb-3">
+                                <label for="Placa" class="form-label">Placa do veiculo</label>
+                                <input type="text" class="form-control" id="Placa" name="Placa" required>                                
+                            </div>
+                             <div class="mb-3">
+                                <label for="Modelo" class="form-label">Modelo do veiculo</label>
+                                <input type="text" class="form-control" id="Modelo" name="Modelo" required>                                
+                            </div>
+                             <div class="mb-3">
+                                <label for="Marca" class="form-label">Marca do veiculo</label>
+                                <input type="text" class="form-control" id="Marca" name="Marca" required>                                
+                            </div>
+
+                             <div class="mb-3">
+                                <label for="Vaga" class="form-label">Vaga</label>
+                                <select name="VagaId" asp-items="ViewBag.Vagas" class="form-control" required>
+                                    <option value="">[Selecione uma vaga]</option>
+                                </select>                             
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+</html>
+
+</html>
+</div>

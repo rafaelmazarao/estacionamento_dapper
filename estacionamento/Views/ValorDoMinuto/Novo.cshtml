@@ -1,0 +1,55 @@
+﻿@model estacionamento_dapper.Models.ValorDoMinuto
+@{
+    ViewData["Title"] = "Incluir Valor do minuto";
+}
+
+<div class="text-center">
+    
+</div>
+
+<div class="text-center">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Valor Do Minuto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Novo valor</h3>
+                    </div>
+                    <div class="card-body">
+                        <form asp-action="Criar" asp-asp-controller="ValorDoMinuto" method="post">                            
+                            <div class="mb-3">
+                                <label for="minutos" class="form-label">Minutos</label>
+                                <input type="number" class="form-control" id="minutos" asp-for="Minutos" required>
+                                <span asp-validation-for="Minutos" class="text-danger"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label for="valor" class="form-label">Valor</label>
+                                <input type="number" class="form-control" id="valor" asp-for="Valor" required>
+                                <span asp-validation-for="Valor" class="text-danger"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Salvar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+</html>
+
+</html>
+</div>
